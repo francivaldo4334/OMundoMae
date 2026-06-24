@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Mundo Mãe - Encontro Presencial Exclusivo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: #333333;
+            line-height: 1.6;
+            background-color: #FAF7F2;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Playfair Display', serif;
+            color: #2B3A32;
+            font-weight: 600;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #2B3A32;
+            color: #FAF7F2;
+            text-decoration: none;
+            padding: 18px 36px;
+            font-weight: 600;
+            border-radius: 4px;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 12px rgba(43, 58, 50, 0.15);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background-color: #3D5247;
+            transform: translateY(-1px);
+        }
+
+        /* 1. Hero Section */
+        .hero {
+            padding: 70px 0 60px 0;
+            text-align: center;
+            background-color: #FAF7F2;
+            min-height: 100vh;
+        }
+
+        .hero-img-wrap {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 36px;
+        }
+
+        /* Placeholder de foto — substitua o conteúdo por uma <img> real quando tiver a foto */
+        .foto-placeholder {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #E5E0D3 0%, #D9D2C0 100%);
+            color: #8A8270;
+            overflow: hidden;
+        }
+
+        .foto-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .foto-placeholder .placeholder-label {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 16px;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            line-height: 1.5;
+        }
+
+        .placeholder-label .icon-cam {
+            font-size: 22px;
+            margin-bottom: 8px;
+            opacity: 0.7;
+        }
+
+        .hero-foto {
+            width: 100%;
+            max-width: 380px;
+            height: 320px;
+            border-radius: 12px;
+            box-shadow: 0 14px 36px rgba(43, 58, 50, 0.12);
+            border: 6px solid #FFFFFF;
+        }
+
+        .anfitria-foto {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            border: 6px solid #FFFFFF;
+            box-shadow: 0 10px 26px rgba(0, 0, 0, 0.08);
+            margin: 0 auto 30px auto;
+        }
+
+        .palestrante-foto {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            flex-shrink: 0;
+            border: 2px solid #EFEBE4;
+        }
+
+        .modulo-head {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 6px;
+        }
+
+        .depoimento-foto {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            margin-bottom: 16px;
+            border: 2px solid #EFEBE4;
+        }
+
+        .galeria-foto {
+            width: 100%;
+            height: 220px;
+            border-radius: 6px;
+        }
+
+        .tag-alerta {
+            display: inline-block;
+            background-color: #99BFA7;
+            color: #2B3A32;
+            padding: 6px 14px;
+            font-size: 11px;
+            font-weight: 700;
+            border-radius: 2px;
+            letter-spacing: 1px;
+            margin-bottom: 35px;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            font-size: 38px;
+            line-height: 1.3;
+            margin-bottom: 24px;
+        }
+
+        .hero .subtitle {
+            font-size: 16px;
+            color: #555555;
+            max-width: 760px;
+            margin: 0 auto 40px auto;
+            font-weight: 400;
+            line-height: 1.7;
+        }
+
+        .hero-details {
+            background: #F1ECE3;
+            display: inline-block;
+            padding: 20px 40px;
+            border-radius: 4px;
+            margin-bottom: 40px;
+        }
+
+        .hero-details p {
+            font-size: 15px;
+            color: #2B3A32;
+            margin: 6px 0;
+            font-weight: 600;
+        }
+
+        /* Prova social no hero */
+        .social-proof {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin: 0 auto 30px auto;
+            font-size: 13px;
+            color: #555;
+            font-weight: 600;
+        }
+
+        .social-proof .avatares {
+            display: flex;
+        }
+
+        .social-proof .avatar-mini {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: 2px solid #FAF7F2;
+            margin-left: -10px;
+            background: #D9D2C0;
+        }
+
+        .social-proof .avatar-mini:first-child {
+            margin-left: 0;
+        }
+
+        /* Contador de vagas */
+        .vagas-contador {
+            max-width: 360px;
+            margin: 0 auto 36px auto;
+        }
+
+        .vagas-barra-bg {
+            background: #E8E2D4;
+            border-radius: 20px;
+            height: 10px;
+            overflow: hidden;
+        }
+
+        .vagas-barra-fill {
+            background: linear-gradient(90deg, #99BFA7, #5E7D69);
+            height: 100%;
+            width: 73%;
+            border-radius: 20px;
+        }
+
+        .vagas-texto {
+            font-size: 12px;
+            color: #A45A5A;
+            font-weight: 700;
+            margin-top: 8px;
+            letter-spacing: 0.3px;
+        }
+
+        /* Depoimentos */
+        .depoimentos {
+            padding: 90px 0;
+            background-color: #F1ECE3;
+        }
+
+        .depoimentos h2 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 50px;
+        }
+
+        .depoimentos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 28px;
+        }
+
+        .depoimento-card {
+            background: #FFF;
+            padding: 32px 28px;
+            border-radius: 6px;
+            border: 1px solid #E5DEC6;
+            text-align: center;
+        }
+
+        .depoimento-card .estrelas {
+            color: #C9A24B;
+            font-size: 14px;
+            margin-bottom: 14px;
+        }
+
+        .depoimento-card p.texto {
+            font-size: 14px;
+            color: #444;
+            line-height: 1.7;
+            margin-bottom: 18px;
+            font-style: italic;
+        }
+
+        .depoimento-card .nome {
+            font-size: 13px;
+            font-weight: 700;
+            color: #2B3A32;
+        }
+
+        .depoimento-card .ciclo-info {
+            font-size: 12px;
+            color: #888;
+        }
+
+        /* Galeria do ambiente */
+        .galeria {
+            padding: 90px 0;
+            background-color: #FAF7F2;
+            text-align: center;
+        }
+
+        .galeria h2 {
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+
+        .galeria .sub {
+            color: #666;
+            font-size: 15px;
+            margin-bottom: 45px;
+        }
+
+        .galeria-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+        }
+
+        /* FAQ */
+        .faq {
+            padding: 90px 0;
+            background-color: #F1ECE3;
+        }
+
+        .faq h2 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 50px;
+        }
+
+        .faq-list {
+            max-width: 720px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: #FFF;
+            border: 1px solid #E5DEC6;
+            border-radius: 6px;
+            margin-bottom: 14px;
+            padding: 24px 28px;
+        }
+
+        .faq-item h4 {
+            font-size: 16px;
+            margin-bottom: 8px;
+            color: #2B3A32;
+        }
+
+        .faq-item p {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Garantia */
+        .garantia-box {
+            max-width: 460px;
+            margin: 28px auto 0 auto;
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            text-align: left;
+            background: #F1ECE3;
+            border-radius: 6px;
+            padding: 20px 24px;
+        }
+
+        .garantia-box .icon-g {
+            font-size: 26px;
+            flex-shrink: 0;
+        }
+
+        .garantia-box p {
+            font-size: 13px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .garantia-box strong {
+            color: #2B3A32;
+        }
+
+        /* CTA flutuante mobile */
+        .cta-fixo {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #FFF;
+            padding: 14px 20px;
+            box-shadow: 0 -6px 20px rgba(0, 0, 0, 0.08);
+            z-index: 999;
+            text-align: center;
+        }
+
+        .cta-fixo .btn {
+            width: 100%;
+            padding: 14px 20px;
+            font-size: 13px;
+        }
+
+        @media (max-width: 768px) {
+            .cta-fixo {
+                display: block;
+            }
+
+            body {
+                padding-bottom: 70px;
+            }
+        }
+
+        .diagnostico {
+            padding: 80px 0;
+            background-color: #FAF7F2;
+            text-align: center;
+        }
+
+        .diagnostico h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .diagnostico .intro {
+            font-size: 16px;
+            max-width: 700px;
+            margin: 0 auto 50px auto;
+            color: #555555;
+        }
+
+        .dores-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+            text-align: left;
+        }
+
+        .dor-card {
+            background-color: #FFF;
+            padding: 35px;
+            border-radius: 4px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+            border: 1px solid #EFEBE4;
+        }
+
+        .dor-card .ciclo-num {
+            font-family: 'Playfair Display', serif;
+            font-size: 44px;
+            color: #99BFA7;
+            line-height: 1;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .dor-card p {
+            font-size: 15px;
+            color: #444444;
+            line-height: 1.7;
+        }
+
+        .dor-card strong {
+            color: #2B3A32;
+            font-weight: 600;
+        }
+
+        .diagnostico .conclusao {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            color: #2B3A32;
+            max-width: 750px;
+            margin: 0 auto;
+            line-height: 1.5;
+            font-style: italic;
+        }
+
+        /* 3. Manifesto & Anfitriã */
+        .manifesto {
+            padding: 100px 0;
+            background-color: #99BFA7;
+            color: #2B3A32;
+            text-align: center;
+        }
+
+        .manifesto-content {
+            max-width: 750px;
+            margin: 0 auto;
+        }
+
+        .quote-box {
+            background: #FFF;
+            padding: 50px 40px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+            margin-bottom: 60px;
+        }
+
+        .quote {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            line-height: 1.7;
+            color: #2B3A32;
+            margin-bottom: 25px;
+            font-style: italic;
+        }
+
+        .author {
+            font-size: 13px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #555555;
+            font-weight: 600;
+        }
+
+        .manifesto h3 {
+            font-size: 30px;
+            margin-bottom: 25px;
+            color: #2B3A32;
+        }
+
+        .manifesto .bio {
+            font-size: 15px;
+            font-weight: 400;
+            color: #33443B;
+            line-height: 1.8;
+            text-align: justify;
+            text-justify: inter-word;
+        }
+
+        /* 4. Cronograma */
+        .cronograma {
+            padding: 90px 0;
+            background-color: #FAF7F2;
+        }
+
+        .cronograma h2 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .cronograma .sub {
+            text-align: center;
+            color: #666;
+            font-size: 15px;
+            margin-bottom: 60px;
+        }
+
+        .timeline {
+            max-width: 750px;
+            margin: 0 auto;
+        }
+
+        .modulo-card {
+            background: #FFF;
+            padding: 40px;
+            border-radius: 4px;
+            margin-bottom: 30px;
+            border: 1px solid #EFEBE4;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.01);
+        }
+
+        .modulo-tag {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 600;
+            color: #99BFA7;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+
+        .modulo-card h3 {
+            font-size: 22px;
+            margin-bottom: 6px;
+            color: #2B3A32;
+        }
+
+        .modulo-palestrante {
+            font-size: 13px;
+            font-weight: 600;
+            color: #777;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .modulo-desc {
+            font-size: 15px;
+            color: #555555;
+            line-height: 1.7;
+        }
+
+        /* 5. O Que Está Incluso */
+        .incluso {
+            padding: 90px 0;
+            background-color: #F1ECE3;
+            text-align: center;
+        }
+
+        .incluso h2 {
+            font-size: 32px;
+            margin-bottom: 50px;
+        }
+
+        .incluso-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+        }
+
+        .incluso-item {
+            background: #FFF;
+            padding: 35px 25px;
+            border-radius: 4px;
+            border: 1px solid #E5DEC6;
+        }
+
+        .incluso-item .icon {
+            font-size: 26px;
+            margin-bottom: 15px;
+            display: block;
+            color: #99BFA7;
+        }
+
+        .incluso-item h4 {
+            font-size: 18px;
+            color: #2B3A32;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .incluso-item p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* 6. Oferta Direta */
+        .oferta {
+            padding: 100px 0;
+            background-color: #FAF7F2;
+            text-align: center;
+        }
+
+        .oferta h2 {
+            font-size: 30px;
+            margin-bottom: 15px;
+            color: #2B3A32;
+        }
+
+        .oferta .escassez-txt {
+            font-size: 15px;
+            color: #A45A5A;
+            font-weight: 600;
+            margin-bottom: 45px;
+        }
+
+        .preco-box {
+            max-width: 460px;
+            margin: 0 auto 40px auto;
+            padding: 50px 40px;
+            border: 1px solid #C4D6CC;
+            border-radius: 6px;
+            background-color: #FFF;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+        }
+
+        .preco-box .de {
+            font-size: 16px;
+            color: #999;
+            text-decoration: line-through;
+            margin-bottom: 8px;
+        }
+
+        .preco-box .por-label {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #666;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .preco-box .por {
+            font-size: 52px;
+            font-family: 'Playfair Display', serif;
+            color: #2B3A32;
+            font-weight: 700;
+            margin-bottom: 35px;
+        }
+
+        .btn-animado {
+            animation: pulse 2.5s infinite;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .como-funciona {
+            font-size: 13px;
+            color: #666;
+            max-width: 550px;
+            margin: 45px auto 0 auto;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2B3A32;
+            color: #A2B0A8;
+            padding: 40px 0;
+            text-align: center;
+            font-size: 12px;
+            letter-spacing: 0.5px;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 4px 12px rgba(43, 58, 50, 0.15);
+            }
+
+            50% {
+                transform: scale(1.02);
+                box-shadow: 0 4px 20px rgba(43, 58, 50, 0.3);
+            }
+
+            100% {
+                transform: scale(1);
+                box-shadow: 0 4px 12px rgba(43, 58, 50, 0.15);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 30px;
+            }
+
+            .diagnostico h2,
+            .manifesto h3,
+            .cronograma h2,
+            .incluso h2,
+            .oferta h2 {
+                font-size: 26px;
+            }
+
+            .quote {
+                font-size: 18px;
+            }
+
+            .dores-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .preco-box {
+                padding: 40px 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="hero"">
+    <div class=" container">
+        <span class="tag-alerta">APENAS 15 VAGAS DISPONÍVEIS · ENCONTRO PRESENCIAL EXCLUSIVO EM PARNAÍBA</span>
+
+        <h1>Antes do positivo, existe uma mulher que precisa ser acolhida.</h1>
+        <p class="subtitle">A jornada para a maternidade não precisa ser solitária ou cheia de cobranças. Participe
+            de um café colonial intimista com Rejane Nascimento e especialistas convidadas, e descubra como preparar
+            seu corpo e sua mente para a gestação com clareza, leveza e acolhimento.</p>
+
+        <div class="social-proof">
+        </div>
+
+        <div class="hero-details">
+            <p>04 de Julho (Sábado) · 14h às 17h</p>
+            <p>Santuário Sete Nascentes</p>
+            <p style="font-size: 13px; font-weight: 400; color: #666; margin-top: 4px;">(Ambiente reservado e em
+                contato com a natureza — Lagoa da Prata, Parnaíba)</p>
+        </div>
+
+        <div class="vagas-contador">
+            <div class="vagas-barra-bg">
+                <div class="vagas-barra-fill"></div>
+            </div>
+            <p class="vagas-texto">Apenas 4 vagas restantes no lote de R$ 97</p>
+        </div>
+
+        <div style="margin-top: 15px;">
+            <a href="https://wa.me/seu-numero-aqui" class="btn">QUERO GARANTIR MINHA VAGA</a>
+            <p style="font-size: 12px; color: #666; margin-top: 12px; font-style: italic;">Você será direcionada
+                para o atendimento VIP. Restam poucas vagas para o lote atual.</p>
+        </div>
+        </div>
+    </section>
+
+    <section class="diagnostico">
+        <div class="container">
+            <h2>Isto é para você?</h2>
+            <p class="intro">Se você está vivendo a espera pelo positivo, sabe que essa fase vem acompanhada de
+                sentimentos profundos que raramente são compreendidos por quem está de fora:</p>
+
+            <div class="dores-grid">
+                <div class="dor-card">
+                    <span class="ciclo-num">28</span>
+                    <p><strong>A frustração silenciosa</strong> a cada ciclo de 28 dias que recomeça. O luto se renova.
+                        Não é apenas biologia; é o reinício forçado de uma contagem regressiva que esgota o emocional.
+                    </p>
+                </div>
+                <div class="dor-card">
+                    <span class="ciclo-num">Ouve</span>
+                    <p><strong>"Você não pode ficar ansiosa."</strong> Como se fosse possível simplesmente desligar a
+                        ansiedade. Frases clichês que toda tentante ouve e que não ajudam em absolutamente nada,
+                        desrespeitando o processo.</p>
+                </div>
+                <div class="dor-card">
+                    <span class="ciclo-num">Fardo</span>
+                    <p><strong>A sensação de laboratório</strong>, onde o seu corpo parece virar apenas um processo de
+                        testes e exames, deixando de lado o seu bem-estar humano, emocional e psicológico sob cobranças
+                        externas e internas.</p>
+                </div>
+            </div>
+
+            <p class="conclusao">Para quem espera, o tempo se arrasta. Você não precisa carregar esse peso sozinha. O
+                Café Colonial O Mundo Mãe foi desenhado para ser o seu porto seguro.</p>
+        </div>
+    </section>
+
+    <section class="manifesto">
+        <div class="container">
+            <div class="manifesto-content">
+                <div class="quote-box">
+                    <p class="quote">"A espera pelo positivo não precisa ser solitária, cheia de cobranças ou fórmulas
+                        mágicas. Eu sei o que é desejar esse momento e sei o quanto a mulher precisa de colo antes de se
+                        tornar mãe."</p>
+                    <p class="author">— Rejane Nascimento</p>
+                </div>
+
+                <h3>O Futuro do Cuidado Materno Começa Antes da Gestação</h3>
+
+                <!--
+                    SUBSTITUA por foto real da Rejane Nascimento:
+                    <img src="rejane.jpg" alt="Rejane Nascimento, fundadora do O Mundo Mãe">
+                    Tamanho ideal: 440x440px (quadrado), rosto centralizado, sorriso acolhedor.
+                -->
+                <div class="foto-placeholder anfitria-foto">
+                    <div class="placeholder-label">
+                        <span class="icon-cam">📷</span>
+                        Foto de<br>Rejane Nascimento
+                    </div>
+                </div>
+
+                <p class="bio">O Mundo Mãe nasceu do desejo de Rejane Nascimento de humanizar a jornada da maternidade
+                    desde o primeiro passo. Com mais de 20 anos de experiência em Gestão de Pessoas e desenvolvimento
+                    humano, Rejane idealizou este encontro para ser um espaço sagrado de escuta. Ela guiará você e um
+                    grupo restrito de apenas 15 mulheres em uma tarde de profunda conexão, preparando o terreno
+                    emocional para o seu positivo.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cronograma">
+        <div class="container">
+            <h2>Uma tarde desenhada milimetricamente para o seu autocuidado</h2>
+            <p class="sub">Descubra os pilares práticos e integrativos do nosso encontro</p>
+
+            <div class="timeline">
+                <div class="modulo-card">
+                    <span class="modulo-tag">Módulo 1</span>
+                    <div class="modulo-head">
+                        <div class="foto-placeholder palestrante-foto">
+                            <div class="placeholder-label" style="font-size: 8px; padding: 2px;">📷</div>
+                        </div>
+                        <div>
+                            <h3 style="margin-bottom: 0;">O Acolhimento — A Jornada Antes do Positivo</h3>
+                            <p class="modulo-palestrante" style="margin-bottom: 0;">Com Rejane Nascimento</p>
+                        </div>
+                    </div>
+                    <p class="modulo-desc">Uma roda de conversa sem julgamentos para desarmar os medos, acolher as
+                        expectativas e entender que o seu valor vai muito além de um teste de gravidez.</p>
+                </div>
+
+                <div class="modulo-card">
+                    <span class="modulo-tag">Módulo 2</span>
+                    <div class="modulo-head">
+                        <div class="foto-placeholder palestrante-foto">
+                            <div class="placeholder-label" style="font-size: 8px; padding: 2px;">📷</div>
+                        </div>
+                        <div>
+                            <h3 style="margin-bottom: 0;">O Terreno — Cuidado Pré-Concepcional Prático</h3>
+                            <p class="modulo-palestrante" style="margin-bottom: 0;">Com Marília Pereira (Nutricionista)
+                            </p>
+                        </div>
+                    </div>
+                    <p class="modulo-desc">Como nutrir e preparar o seu terreno biológico para receber a gestação de
+                        forma natural, sem dietas restritivas ou neuroses.</p>
+                </div>
+
+                <div class="modulo-card">
+                    <span class="modulo-tag">Módulo 3</span>
+                    <div class="modulo-head">
+                        <div class="foto-placeholder palestrante-foto">
+                            <div class="placeholder-label" style="font-size: 8px; padding: 2px;">📷</div>
+                        </div>
+                        <div>
+                            <h3 style="margin-bottom: 0;">O Retorno ao Presente — Controlando a Ansiedade</h3>
+                            <p class="modulo-palestrante" style="margin-bottom: 0;">Com Bluna Margareth (Coach)</p>
+                        </div>
+                    </div>
+                    <p class="modulo-desc">Uma vivência prática de respiração e presença para acalmar a mente e aliviar
+                        o estresse da espera pelo positivo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="incluso">
+        <div class="container">
+            <h2>Ganhando valor real em cada detalhe</h2>
+
+            <div class="incluso-grid">
+                <div class="incluso-item">
+                    <span class="icon">☕</span>
+                    <h4>Café Colonial Completo</h4>
+                    <p>Um cardápio selecionado em um ambiente reservado, acolhedor e cercado de natureza.</p>
+                </div>
+                <div class="incluso-item">
+                    <span class="icon">✨</span>
+                    <h4>Mesa de Especialistas</h4>
+                    <p>Acesso direto e espaço aberto para tirar suas dúvidas particulares com as palestrantes.</p>
+                </div>
+                <div class="incluso-item">
+                    <span class="icon">🌱</span>
+                    <h4>Kit de Ferramentas</h4>
+                    <p>Exercícios de respiração e orientações nutricionais práticas para aplicar na sua rotina em casa.
+                    </p>
+                </div>
+                <div class="incluso-item">
+                    <span class="icon">🤍</span>
+                    <h4>Comunidade Secreta</h4>
+                    <p>Entrada no grupo exclusivo de WhatsApp das participantes para suporte mútuo pós-evento.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="depoimentos">
+        <div class="container">
+            <h2>Quem já viveu, recomenda</h2>
+
+            <div class="depoimentos-grid">
+                <div class="depoimento-card">
+                    <!--
+                        SUBSTITUA por foto real da participante (com autorização de uso de imagem):
+                        <img src="participante1.jpg" alt="Foto de participante do encontro anterior">
+                    -->
+                    <div class="foto-placeholder depoimento-foto" style="margin: 0 auto 16px auto;">
+                        <div class="placeholder-label" style="font-size: 7px; padding: 2px;">📷</div>
+                    </div>
+                    <p class="estrelas">★★★★★</p>
+                    <p class="texto">"Cheguei tensa e saí leve. Foi a primeira vez que me senti realmente ouvida nessa
+                        fase de tentante, sem julgamento nenhum."</p>
+                    <p class="nome">Participante do encontro anterior</p>
+                    <p class="ciclo-info">Café Colonial · Edição de Maio</p>
+                </div>
+
+                <div class="depoimento-card">
+                    <div class="foto-placeholder depoimento-foto" style="margin: 0 auto 16px auto;">
+                        <div class="placeholder-label" style="font-size: 7px; padding: 2px;">📷</div>
+                    </div>
+                    <p class="estrelas">★★★★★</p>
+                    <p class="texto">"As dicas da nutricionista eu aplico até hoje. E o grupo do WhatsApp se tornou
+                        minha rede de apoio favorita."</p>
+                    <p class="nome">Participante do encontro anterior</p>
+                    <p class="ciclo-info">Café Colonial · Edição de Maio</p>
+                </div>
+
+                <div class="depoimento-card">
+                    <div class="foto-placeholder depoimento-foto" style="margin: 0 auto 16px auto;">
+                        <div class="placeholder-label" style="font-size: 7px; padding: 2px;">📷</div>
+                    </div>
+                    <p class="estrelas">★★★★★</p>
+                    <p class="texto">"A Rejane tem um jeito de acolher que parece colo de mãe. Voltei pra casa com o
+                        coração mais tranquilo."</p>
+                    <p class="nome">Participante do encontro anterior</p>
+                    <p class="ciclo-info">Café Colonial · Edição de Maio</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="galeria">
+        <div class="container">
+            <h2>O espaço que vai te acolher</h2>
+            <p class="sub">Santuário Sete Nascentes — Lagoa da Prata, Parnaíba</p>
+
+            <div class="galeria-grid">
+                <!--
+                    SUBSTITUA cada bloco por fotos reais do Santuário Sete Nascentes
+                    (jardim, mesa posta do café colonial, vista da lagoa, espaço da roda de conversa)
+                -->
+                <div class="foto-placeholder galeria-foto">
+                    <div class="placeholder-label">
+                        <span class="icon-cam">📷</span>
+                        Vista do jardim /<br>natureza do espaço
+                    </div>
+                </div>
+                <div class="foto-placeholder galeria-foto">
+                    <div class="placeholder-label">
+                        <span class="icon-cam">📷</span>
+                        Mesa do café<br>colonial montada
+                    </div>
+                </div>
+                <div class="foto-placeholder galeria-foto">
+                    <div class="placeholder-label">
+                        <span class="icon-cam">📷</span>
+                        Espaço da roda<br>de conversa
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="oferta">
+        <div class="container">
+            <h2>Um investimento no seu bem-estar e no futuro da sua família</h2>
+            <p class="escassez-txt">Por ser um encontro estritamente intimista (apenas 15 lugares), as vagas do primeiro
+                lote são limitadas.</p>
+
+            <div class="preco-box">
+                <p class="de">Preço Oficial: R$ 127</p>
+                <p class="por-label">Lote Convite (VIP Atual):</p>
+                <p class="por">R$ 97</p>
+
+                <a href="https://wa.me/seu-numero-aqui" class="btn btn-animado">CLIQUE AQUI PARA RESERVAR SUA VAGA NO
+                    WHATSAPP</a>
+            </div>
+
+            <div class="garantia-box">
+                <span class="icon-g">🤝</span>
+                <p><strong>Compromisso com você:</strong> se por qualquer motivo o encontro for cancelado ou remarcado,
+                    seu valor é 100% reembolsado ou transferido para a próxima edição, sem burocracia.</p>
+            </div>
+
+            <div class="como-funciona">
+                <p><strong>Como funciona?</strong> Ao clicar, você iniciará uma conversa direta com a nossa equipe no
+                    WhatsApp VIP. Nós confirmaremos se ainda há vagas disponíveis no lote de R$ 97 e geraremos seu link
+                    de pagamento (Pix ou Cartão) de forma rápida e segura. Sem formulários, sem perda de tempo.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq">
+        <div class="container">
+            <h2>Perguntas frequentes</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <h4>Preciso já estar tentando engravidar para participar?</h4>
+                    <p>Não. O encontro acolhe mulheres em qualquer momento da jornada — desde quem está apenas
+                        considerando a maternidade até quem já está em tentativa ativa.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>E se eu estiver fazendo tratamento de fertilidade?</h4>
+                    <p>Você é muito bem-vinda. O encontro é um complemento emocional e de autocuidado, não substitui
+                        acompanhamento médico, e respeita o seu processo individual.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>O valor inclui tudo ou tem custo extra no dia?</h4>
+                    <p>O valor de R$ 97 inclui o café colonial completo, todas as atividades dos três módulos e o
+                        material de apoio. Não há nenhum custo extra no local.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Posso ir acompanhada do meu parceiro(a)?</h4>
+                    <p>Este encontro foi desenhado como um espaço só para mulheres, pensado para gerar intimidade e
+                        liberdade na troca entre as participantes.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Como faço o pagamento?</h4>
+                    <p>Após reservar sua vaga pelo WhatsApp, você recebe um link de pagamento seguro via Pix ou cartão.
+                        Sua vaga é confirmada assim que o pagamento é identificado.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 omundomaeoficial.com · Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <div class="cta-fixo">
+        <a href="https://wa.me/seu-numero-aqui" class="btn">👉 GARANTIR MINHA VAGA — R$ 97</a>
+    </div>
+
+</body>
+
+</html>
