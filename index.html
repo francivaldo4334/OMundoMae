@@ -843,56 +843,6 @@
             </div>
         </div>
     </section>
-    <!-- 
-  FAB (BOTÃO FLUTUANTE) 
-  Controlado exclusivamente por CSS inline para posicionamento e animação 
--->
-    <div id="cta-floating-container" style="
-        position: fixed; 
-        bottom: 24px; 
-        right: 24px; 
-        z-index: 99999; 
-        opacity: 0; 
-        transform: translateY(20px); 
-        pointer-events: none; 
-        transition: opacity 0.3s ease, transform 0.3s ease;
-     ">
-
-        <a href="https://wa.me/seu-numero-aqui" class="btn btn-animado"
-            style="display: block; background: #25d366; color: #fff; padding: 18px 20px; font-size: 16px; font-weight: bold; text-decoration: none; border-radius: 8px; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3); transition: transform 0.2s; letter-spacing: 0.5px;">
-            <i class="fa-brands fa-whatsapp text-xl"></i>
-            <span>Garantir Vaga</span>
-        </a>
-    </div>
-
-    <!-- Script de Controle de Visibilidade -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const heroSection = document.getElementById("hero-section");
-            const floatingContainer = document.getElementById("cta-floating-container");
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (!entry.isIntersecting) {
-                        // Usuário passou do Hero: Exibe o FAB com CSS Puro
-                        floatingContainer.style.opacity = "1";
-                        floatingContainer.style.transform = "translateY(0)";
-                        floatingContainer.style.pointerEvents = "auto";
-                    } else {
-                        // Usuário voltou ao topo: Esconde o FAB
-                        floatingContainer.style.opacity = "0";
-                        floatingContainer.style.transform = "translateY(20px)";
-                        floatingContainer.style.pointerEvents = "none";
-                    }
-                });
-            }, {
-                threshold: 0.1 // Ativa logo que o Hero começa a sair da tela
-            });
-
-            observer.observe(heroSection);
-        });
-    </script>
-
     <section class="diagnostico" style="padding: 60px 0; background-color: #faf8f5;">
         <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
 
